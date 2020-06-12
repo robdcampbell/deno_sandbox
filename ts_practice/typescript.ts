@@ -8,7 +8,7 @@ const sum = (a: number, b: number) => {
 
 const answer = sum(4,5)
 
-console.log(answer);
+//console.log(answer);
 
 
 
@@ -66,9 +66,55 @@ let error =  (): never =>{
 interface RobotArmy {
     count: number,
     type: string,
-    magic: string
-}
+    magic?: string
+};
 
 let fightRobotArmy = (robots: RobotArmy) => {
     console.log('FIGHT!')
+};
+
+let fightRobotArmy2 = (robots: {count:number, type:string,magic:string}) =>{
+    console.log('FIGHT!');
 }
+
+interface CatArmy {
+    count: number,
+    type: string,
+    magic: string
+};
+
+let dog = {} as CatArmy;
+dog.count;
+
+// Function
+let fightRobotArmy3 = (robots: RobotArmy): void => {
+    console.log('FIGHT!')
+};
+
+let fightRobotArmy4 = (robots: {count:number, type:string,magic:string}): number =>{
+    console.log('FIGHT!');
+    return 5;
+}
+
+// Class
+class Animal {
+    sing: string = 'alalalalalalalalala';
+    constructor(sound: string){
+        this.sing = sound;
+    }
+
+    greet(): string {
+        return `Hello ${this.sing}`
+    }
+}
+
+let lion = new Animal('RAAAWR')
+lion.greet();
+
+// Union   (can be either of the 2 listen data types)
+let confused: string | number = 'hello';
+
+// Type inference 
+let x = 4;
+//  x ='hello';   -> will throw an arrow, because  'let x=4' assumed the data type is a number and stored it that way
+

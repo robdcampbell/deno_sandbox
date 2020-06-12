@@ -4,7 +4,7 @@ var sum = function (a, b) {
     return a + b;
 };
 var answer = sum(4, 5);
-console.log(answer);
+//console.log(answer);
 // DATA TYPES
 //boolean
 var isCool = true;
@@ -49,6 +49,39 @@ var sing = function () {
 var error = function () {
     throw Error('ooooooops');
 };
+;
 var fightRobotArmy = function (robots) {
     console.log('FIGHT!');
 };
+var fightRobotArmy2 = function (robots) {
+    console.log('FIGHT!');
+};
+;
+var dog = {};
+dog.count;
+// Function
+var fightRobotArmy3 = function (robots) {
+    console.log('FIGHT!');
+};
+var fightRobotArmy4 = function (robots) {
+    console.log('FIGHT!');
+    return 5;
+};
+// Class
+var Animal = /** @class */ (function () {
+    function Animal(sound) {
+        this.sing = 'alalalalalalalalala';
+        this.sing = sound;
+    }
+    Animal.prototype.greet = function () {
+        return "Hello " + this.sing;
+    };
+    return Animal;
+}());
+var lion = new Animal('RAAAWR');
+lion.greet();
+// Union   (can be either of the 2 listen data types)
+var confused = 'hello';
+// Type inference 
+var x = 4;
+//  x ='hello';   -> will throw an arrow, because  'let x=4' assumed the data type is a number and stored it that way
